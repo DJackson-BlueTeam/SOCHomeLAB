@@ -53,3 +53,24 @@ Runs on hypervisors like VirtualBox, VMware, KVM, or in cloud environments (AWS,
 **5. Network Settings**
   - Adapter 1 (WAN): Enable and set to Bridge Adapter (Select your Wi-fi/Ethernet card) or NAT (this is the door to your internet)
   - Adapter 2 (LAN): Switched to the `Expert` tab, Enable the adapter, and set to Internal Network (name it `intnet`). This is the door to the private lab.
+
+## Phase 2: The pfSense Installer Process
+Start the pfSense Virtual Machine
+
+**1. Welcome Screen**
+   - Select Install and press `Enter` on `ok`
+
+**2. WAN Interface Assignment**
+   - Select em0 (this matches the first VirtaulBoz Adapter). Press `Enter` on `ok`
+
+**3. LAN Interace Assignment**
+   - Select em1 (this matches the internal network adapter). Press `Enter` on `ok`
+
+**4. Interface Confirmation**
+   - The Screen will show `WAN -> em0` and `LAN -> em1`. Select Continue and press Enter
+
+**5. Installation Options (File System)**
+   - Select >>Continue (Process with the installation) and press `Enter` on `Ok`. Keep the defaults (ZFS and GPT)
+
+**6. Package installation**
+   - Select `Yes` this is normal, The installer is downloading the core system files from the internet. Do not interrupt this process.   
