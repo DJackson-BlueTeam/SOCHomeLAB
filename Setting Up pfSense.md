@@ -116,3 +116,25 @@ Start the pfSense Virtual Machine
    - Start up Windows VM
    - Open Command Prompt and type `ipconfig /renew`
    - You Should see an IPv4 address like `xxx.xxx.x.10` and a Default Gateway of `xxx.xxx.x.1`
+
+## Phase 6: Web Configuration & Final Wizard
+**1. Access GUI**
+   - Inside the Windows VM, open a browser and go to `https://xxx.xxx.x.1`
+
+**2. Security Warning**
+   - Click Advance and Proceed (Bypass the self-signed certificate warning)
+
+**3. Login**
+   - Username: admin | password; pfsense (highly recommended to change password)
+
+**4. Setup Wizard**
+   -  Hostname: SOCHomeLab (What ever name desirable).
+   -  Timezone: `Etc/UTC` (Industry Standard for SOC operations).
+   -  WAN Interface: Keep DHCP: leave MAC and MTU fields blank.
+   -  Admin Password: Create and new, secure passsword
+   
+**5. Reload**
+   - Click reload to apply all settings.
+  
+## Your Lab is now fully configured! your Windows Malware Analysis machine is safely isolated behind the pfSense firewall, allowing you to monitor and controll all malicious network traffic. 
+
